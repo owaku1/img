@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Změna Obrázku</title>
+    <script src="/java/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Změna Obrázku</h1>
+    
+    <label for="imageURL">Zadej adresu obrázku:</label>
+    <input type="text" id="imageURL" placeholder="https://example.com/image.jpg">
+    <button onclick="changeImage()">Změnit obrázek</button>
+
+    <div>
+        <h2>Defaultní obrázek:</h2>
+        <img id="defaultImage" src="https://via.placeholder.com/300" alt="Defaultní obrázek">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</html>
