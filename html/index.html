@@ -3,34 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Změna Obrázku</title>
+    <title>Přidání obrázku se seznamem názvů</title>
     <script src="/java/script.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            margin-right: 20px;
+        }
         img {
             width: 300px;
             height: auto;
-            margin-top: 20px;
+        }
+        .list-container {
+            text-align: left;
+        }
+        .list-container h2 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Změna Obrázku</h1>
-    
-    <label for="imageURL">Zadej adresu obrázku:</label>
-    <input type="text" id="imageURL" placeholder="https://example.com/image.jpg">
-    <button onclick="changeImage()">Změnit obrázek</button>
+    <h1>Přidání obrázku se seznamem názvů</h1>
 
-    <div>
-        <h2>Defaultní obrázek:</h2>
-        <img id="defaultImage" src="https://via.placeholder.com/300" alt="Defaultní obrázek">
+    <label for="imageURL">Vlož adresu obrázku:</label>
+    <input type="text" id="imageURL" placeholder="https://example.com/image.jpg">
+
+    <label for="imageName">Vlož název obrázku:</label>
+    <input type="text" id="imageName" placeholder="Název obrázku">
+
+    <button onclick="addImage()">Přidat obrázek</button>
+
+    <div class="container">
+        <div class="image-container">
+            <img id="displayImage" src="https://via.placeholder.com/300" alt="Zvolený obrázek">
+        </div>
+        <div class="list-container">
+            <h2>Seznam názvů obrázků:</h2>
+            <ol id="imageList"></ol>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
 
-</html>
+
+
